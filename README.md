@@ -139,3 +139,17 @@
 
   * Para inserir os dados fake criados
   * >yarn sequelize db:seed:all
+
+# PARA O [DESAFIO 3](https://github.com/Rocketseat/bootcamp-gostack-desafio-03/blob/master/README.md#desafio-03-continuando-aplica%C3%A7%C3%A3o)
+  * Criar a tabela deliveryman
+  * > yarn sequelize migration:create --name=create-deliveryman
+  * > yarn sequelize db:migrate
+
+  * Criar a tabela files que vai guardar arquivos da aplicação, como fotos de perfil
+  * > yarn sequelize migration:create --name=create-files
+  * > yarn sequelize db:migrate
+  * Criar uma pasta temporária para armazenar os files
+  * Criar um campo na tabela deliveryman que referencia o registro na tabela file
+  * > yarn sequelize migration:create --name=add-avatar-field-to-deliveryman
+  * > yarn sequelize db:migrate
+
