@@ -128,7 +128,13 @@ class AdminController {
       }
     }
 
-    const recipientUpdated = await recipient.update(req.body);
+    const recipientUpdated = await recipient.update(req.body, {
+      include: [
+        {
+          attributes: ['id', 'name', 'email'],
+        },
+      ],
+    });
 
     return res.status(200).json({
       status: 'ok',

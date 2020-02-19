@@ -1,7 +1,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.addColumn(
-      'deliveryman', // nome da tabela
+      'deliverymans', // nome da tabela
       'avatar_id', // nome da coluna // todo avatar_id da tabela user vai ser tambem um id contido na tabela files.
       {
         type: Sequelize.INTEGER, // vai referenciar o id da imagem
@@ -14,6 +14,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.removeColumn('deliveryman', 'avatar_id');
+    return queryInterface.removeColumn('deliverymans', 'avatar_id');
   },
 };

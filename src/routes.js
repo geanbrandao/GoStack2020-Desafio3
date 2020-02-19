@@ -3,6 +3,7 @@ import { Router } from 'express';
 
 import SessionController from './app/controllers/SessionController';
 import RecipientController from './app/controllers/RecipientController';
+import DeliverymanController from './app/controllers/DeliverymanController';
 
 import authMiddleware from './app/middleware/auth';
 
@@ -24,5 +25,11 @@ routes.put('/recipient', RecipientController.update);
 
 // deleta destinatario usando id
 routes.delete('/recipient', RecipientController.destroy);
+
+// Admin-deliveryman
+routes.post('/deliveryman', DeliverymanController.store);
+routes.delete('/deliveryman/:deliveryman_id', DeliverymanController.destroy);
+routes.get('/deliverymans', DeliverymanController.index);
+routes.put('/deliveryman/:deliveryman_id', DeliverymanController.update);
 
 export default routes;

@@ -153,3 +153,11 @@
   * > yarn sequelize migration:create --name=add-avatar-field-to-deliveryman
   * > yarn sequelize db:migrate
 
+  * Adicionar dependência para tratamento de exceções
+  * > yarn add @sentry/node@5.12.2
+  * Como as funções são assíncronas o express não consegue pegar os erros e mandar para o sentry
+  * Para resolver isso
+  * > yarn add express-async-errors
+  * Faz a tratativa do erros para dar uma vizualização melhor para o desenvolvedor
+  * > yarn add youch
+
